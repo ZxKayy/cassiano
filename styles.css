@@ -5,15 +5,14 @@
 @import url("styles/contato.css");
 @import url("styles/rodapé.css");
 
-
 :root {
     --cor-de-fundo: #5f3737;
     --branco: #824141;
     --laranja: #EB9B00;
     --azul-degrade: linear-gradient(97.54deg, #6d0c0c 35.49%, hsl(0, 100%, 50%) 165.37%);
-    --fonte-principal: "Poppins";
+    --fonte-principal: "Poppins", sans-serif; /* Adicionado fallback */
     --azul: #002F52;
-    --fonte-secundario: "Josefin Sans";
+    --fonte-secundario: "Josefin Sans", sans-serif; /* Adicionado fallback */
     --preto: #000000;
     --cinza: #474646;
     --cinza-claro: #d0d0d0;
@@ -24,4 +23,41 @@ body {
     font-family: var(--fonte-principal);
     font-size: 16px;
     font-weight: 400;
+    margin: 0; /* Remove margem padrão */
+    color: var(--branco); /* Define cor do texto padrão */
+}
+
+header {
+    background-color: var(--azul); /* Estilo para o cabeçalho */
+    padding: 20px; /* Espaçamento interno */
+}
+
+h1, h2, h3 {
+    color: var(--laranja); /* Cor dos títulos */
+    margin: 0; /* Remove margem padrão dos títulos */
+}
+
+nav {
+    background-color: var(--cinza); /* Cor de fundo do nav */
+    padding: 10px; /* Espaçamento interno */
+}
+
+section {
+    padding: 20px; /* Espaçamento interno das seções */
+}
+
+footer {
+    background-color: var(--azul); /* Cor de fundo do rodapé */
+    color: var(--branco); /* Cor do texto no rodapé */
+    text-align: center; /* Centraliza o texto */
+    padding: 20px; /* Espaçamento interno do rodapé */
+}
+
+a {
+    color: var(--laranja); /* Cor dos links */
+    text-decoration: none; /* Remove o sublinhado dos links */
+}
+
+a:hover {
+    text-decoration: underline; /* Adiciona sublinhado no hover */
 }
